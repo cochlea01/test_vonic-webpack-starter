@@ -1,0 +1,21 @@
+@mixin flex{
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+@mixin justify($new,$old){
+    -webkit-box-pack: $old;
+    -moz-justify-content: $new;
+    -webkit-justify-content: $new;
+    justify-content: $new;
+}
+
+@mixin align($new,$old){
+    -webkit-box-align: $old;
+    -moz-align-items: $new;
+    -webkit-align-items: $new;
+    align-items: $new;
+}

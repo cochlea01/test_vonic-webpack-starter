@@ -1,0 +1,20 @@
+export default [
+    [
+        {
+            text:'初中',
+            value:1
+        },{
+            text:'高中',
+            value:2
+        },{
+            text:'本科',
+            value:3
+        },{
+            text:'研究生',
+            value:4
+        },{
+            text:'博士',
+            value:5
+        }
+    ]
+]
