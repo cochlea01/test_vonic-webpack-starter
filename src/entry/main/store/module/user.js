@@ -1,3 +1,4 @@
+import userService from 'service/ajax/user'
 export default {
     state:{
         userName:'爱佛什',
@@ -14,21 +15,26 @@ export default {
 
     },
     mutations:{
-        increment(state,n){
-            state.lineOfCredit += n;
-        },
-        updateName(state,value){
-            state.name = value;
-        },
-        updateIdcard(state,value){
-            state.idcard = value;
-        }
+        // increment(state,n){
+        //     state.lineOfCredit += n;
+        // },
+        // updateName(state,value){
+        //     state.name = value;
+        // },
+        // updateIdcard(state,value){
+        //     state.idcard = value;
+        // }
     },
     actions:{
-        incrementAsync({commit}){
-            setTimeout(function(){
-                commit('increment',100)
-            },1000)
-        }
+        // incrementAsync({commit}){
+        //     setTimeout(function(){
+        //         commit('increment',100)
+        //     },1000)
+        // },
+        // update({commit}){
+        //     userService.getUserInfo().then(data=>{
+        //         console.log(data);
+        //     })
+        // }
     }
 }

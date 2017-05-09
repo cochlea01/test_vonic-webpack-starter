@@ -1,5 +1,5 @@
 <template>
-    <article class="page has-navbar" v-nav="{title:'紧急联系人',showBackButton:true}">
+    <article class="page has-navbar" v-nav="{title:'紧急联系人'}">
         <div class="page-content">
             <von-input
                 type="text"

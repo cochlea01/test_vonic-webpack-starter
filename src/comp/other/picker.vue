@@ -10,6 +10,8 @@
     </div>
 </template>
 <script>
+    //导入重置的样式文件
+    require('asset/scss/reset/picker.scss')
     import Picker from 'better-picker'
     
     export default{
@@ -88,5 +90,5 @@
     }
 </script>
 <style lang="scss" scoped>
-    
+
 </style>

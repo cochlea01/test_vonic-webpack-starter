@@ -1,5 +1,5 @@
 <template>
-    <article class="page has-navbar" v-nav="{title:'职业信息',showBackButton:true}">
+    <article class="page has-navbar" v-nav="{title:'职业信息'}">
         <div class="page-content">
 
             <picker

@@ -1,4 +1,20 @@
-.md-button{
+@import '../mixin/export.scss';
+
+.button{
     box-shadow:none; 
     -webkit-box-shadow:none;
+}
+
+//块状字体
+.button-block{
+    font-size: $fontBn;
+    line-height: $fontBn;
+    height: auto;
+    min-height: auto;
+    padding: $pt16 0 $pt15;
+}
+
+/*按钮背景色*/
+.button.button-balanced{
+    background: #45d7aa;
 }
