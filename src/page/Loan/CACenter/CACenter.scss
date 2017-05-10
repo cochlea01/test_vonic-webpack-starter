@@ -1,0 +1,115 @@
+@import '../../../asset/scss/mixin/export.scss';
+.CA_status{
+    margin-top: $pt50;
+    margin-bottom: $pt40;
+    h3{
+        font-size: $fontBb;
+        text-align: center;
+        margin:0;
+        color: $energized;
+    }
+}
+.CA_info{
+    position: relative;
+    //未认证样式
+    p{
+        position: relative;
+        margin-bottom: $pt30;
+        color: $grayLl;
+        line-height: $fontNn;
+        font-size: $fontNn;
+        width: 3rem;
+        text-indent: 0.5rem;
+        margin: 0 auto $pt30;
+        text-decoration: underline;
+        .type{
+            display: inline-block;
+            position: absolute;
+            top: -3px;
+            left: -$pt10;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        &.personal{
+            .type{
+                width: 16px;
+                height: 24px;
+                background-image: url('../../../asset/img/ca/personal_not@3x.png');
+            }
+        }
+        &.idcard{
+            .type{
+                width: 15px;
+                height: 20px;
+                background-image: url('../../../asset/img/ca/identity_not@3x.png');
+            }
+        }
+        &.bankcard{
+            .type{
+                width: 19px;
+                height: 17px;
+                left: -$pt12;
+                top: 0;
+                background-image: url('../../../asset/img/ca/bank_not@3x.png');
+            }
+        }
+        &.operator{
+            .type{
+                width: 14px;
+                height: 20px;
+                background-image: url('../../../asset/img/ca/operator_not@3x.png');
+            }
+        }
+        .status{
+            position: absolute;
+            top: -1px;
+            right: -10px;
+            width: $fontNb;
+            height: $fontNb;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-image: url('../../../asset/img/ca/entrance@3x.png');
+        }
+    }
+    //已认证样式
+    p.active{
+        color: $energized;
+        text-decoration: none;
+        &.personal{
+            .type{
+                background-image: url('../../../asset/img/ca/personal_certification@3x.png');
+            }
+        }
+        &.idcard{
+            .type{
+                background-image: url('../../../asset/img/ca/identity_certification@3x.png');
+            }
+        }
+        &.bankcard{
+            .type{
+                background-image: url('../../../asset/img/ca/bank_certification@3x.png');
+            }
+        }
+        &.operator{
+            .type{
+                background-image: url('../../../asset/img/ca/operator_certification@3x.png');
+            }
+        }
+        .status{
+            background-image: url('../../../asset/img/ca/authenticated@3x.png');
+        }
+    }
+    
+}
+
+.CA_light{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .img{
+        display: inline;
+        vertical-align: bottom;
+        height: $pt220;
+    }
+}

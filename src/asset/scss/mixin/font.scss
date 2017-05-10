@@ -1,0 +1,62 @@
+@import 'variable.scss';
+
+//普小字体，普灰
+@mixin font_ns_gn{
+    font-size: $fontNs;
+    color: $grayN;
+}
+
+//大大字体，普灰
+@mixin font_bb_gn{
+    font-size: $fontBb;
+    color: $grayN;
+}
+
+//小普字体，普灰
+@mixin font_sn_gn{
+    font-size: $fontSn;
+    color: $grayN;
+}
+
+//小普字体，普轻灰
+@mixin font_sn_gnl{
+    font-size: $fontSn;
+    color: $grayNl;
+}
+
+//普普字体，轻灰
+@mixin font_nn_gl{
+    font-size: $fontNn;
+    color: $grayL;
+}
+
+//小小字体，普灰
+@mixin font_ss_gn{
+    font-size: $fontSs;
+    color: $grayN;
+}
+//小小小字体，轻轻灰
+@mixin font_sss_gll{
+    font-size: $fontSss;
+    color: $grayLl;
+}
+//小小字体,轻灰
+@mixin font_ss_gl{
+    font-size: $fontSs;
+    color: $grayL;
+}
+//小小字体，普轻灰
+@mixin font_ss_gll{
+    font-size: $fontSs;
+    color: $grayLl;
+}
+//普小字体，轻轻灰
+@mixin font_ns_gll{
+    font-size: $fontNs;
+    color: $grayLl;
+}
+//普大字体，普灰
+@mixin font_nb_gn{
+    font-size: $fontNb;
+    color: $grayN;
+}

@@ -13,41 +13,34 @@ util.rem();
 window.addEventListener('resize',util.rem);
 
 // Routes
-const routes = [{ 
-    path: '/',
-    name: 'index',
-    component: ()=> import('page/Index/Index.vue')
-  },{ 
-    path: '/ca',
-    name: 'ca_index',
-    component: ()=>import('page/CA/Index/Index.vue')
+const routes = [{
+    path:'/',
+    redirect:'/loan/index'
   },{
-    path:'/ca/idcard',
-    name: 'ca_idcard',
-    component:()=>import('page/CA/Idcard.vue')
+    //借款-借款页面
+    path: '/loan/index',
+    name: 'loan_index',
+    component: ()=> import('page/Loan/Index/Index.vue')
   },{
-    path:'/ca/personal',
-    name: 'ca_personal',
-    component:()=>import('page/CA/Personal.vue')
-  },{
-    path:'/ca/profession',
-    component:()=>import('page/CA/Profession.vue')
-  },{
-    path:'/ca/emergency',
-    name: 'ca_emergency',
-    component:()=>import('page/CA/Emergency.vue')
-  },{
-    path:'/ca/bankcard',
-    name: 'ca_bankcard',
-    component:()=>import('page/CA/Bankcard/Bankcard.vue')
-  },{
-    path:'/ca/operator',
-    name: 'ca_operator',
-    component:()=>import('page/CA/Operator.vue')
+    //借款-认证中心
+    path: '/loan/cacenter',
+    name: 'loan_cacenter',
+    component: ()=>import('page/Loan/CACenter/CACenter.vue')
   },{
     //用户-借款记录
     path:'/user/loanrecord',
+    name:'user_loanrecord',
     component:()=>import('page/User/LoanRecord/LoanRecord.vue')
+  },{
+    //用户-优惠券
+    path:'/user/privilege',
+    name:'user_privilege',
+    component:()=>import('page/User/Privilege/Privilege.vue')
+  },{
+    //系统-消息
+    path:'/system/message',
+    name:'system_message',
+    component:()=>import('page/System/Message/Message.vue')
   }]
 
 Vue.use(Vonic.app, {

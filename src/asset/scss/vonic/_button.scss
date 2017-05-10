@@ -16,5 +16,39 @@
 
 /*按钮背景色*/
 .button.button-balanced{
-    background: #45d7aa;
+    background: $balanced;
+}
+.button.button-energized{
+    background: $energized;
+}
+
+//button-bar样式重置
+.von-button-bar{
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    padding: $pt20 $pt20 0;
+    z-index: 99;
+    //随后的page-conent将自动对齐
+    &~.page{
+        .page-content{
+            top: $pt72;
+        }
+    }
+    .button{
+        border-width: 0!important;
+        min-height: $pt30;
+        line-height: $pt32;
+    }
+    .button:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .button:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .button-outline{
+        background: $white!important;
+    }
 }

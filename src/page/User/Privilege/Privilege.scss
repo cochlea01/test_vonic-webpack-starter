@@ -1,0 +1,51 @@
+@import '../../../asset/scss/mixin/export.scss';
+.list{
+    padding: 0 $pt20;
+    margin-bottom: 0;
+    li{
+        position: relative;
+        color: $grayLl;
+        margin-bottom: $pt14;
+        h3{
+            color: $grayLl;
+        }
+        img{
+            width:100%;
+        }
+        .limit{
+            position: absolute;
+            font-size: $fontSs;
+            left: $pt14;
+            top: $pt32;
+            span{
+                font-size: $fontBbb;
+            }
+        }
+        .detail{
+            position: absolute;
+            top: $pt20;
+            left: $pt100;
+            h3{
+                font-size: $fontNn;
+                line-height: $pt15;
+                height: $pt15;
+                margin-bottom: $pt8;
+            }
+            p{
+                font-size: $fontSss;
+                line-height: $pt10;
+                height: $pt10;
+                margin-bottom: $pt5;
+            }
+        }
+    }
+    li.securities{
+        color: $positive;
+        h3{
+            color: $positive;
+        }
+    }
+    li:last-child{
+        margin-bottom: 0;
+    }
+}

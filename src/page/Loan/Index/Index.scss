@@ -1,0 +1,193 @@
+@import '../../../asset/scss/mixin/export.scss';
+
+.page-content{
+    padding: $pt20 $pt20 0;
+}
+//个人信息一览
+.person_info{
+    position: relative;
+    margin-bottom: $pt20;
+    .bg{
+        width: 100%;
+    }
+    .level{
+        position: absolute;
+        right: $pt20;
+        top: $pt25;
+        height: 20px;
+        width: 92px;
+        li{
+            float: left;
+            margin-left: 3px;
+            width: 20px;
+            height: 20px;
+            background: url('../../../asset/img/index/bulb@3x.png') no-repeat;
+            background-size: 100%;
+            &.active{
+                background-image: url('../../../asset/img/index/bulb_highlight@3x.png');
+            }
+        }
+    }
+    .main{
+        position: absolute;
+        top: $pt13;
+        .title{
+            @include font_ns_gn;
+            p{
+                margin-bottom: $pt18;
+            }
+        }
+        .credit{
+            @include font_bb_gn;
+        }
+        left: $pt25;
+    }
+    .aside{
+        width: 100%;
+        padding: 0 $pt25;
+        position: absolute;
+        @include font_sn_gn;
+        top:3.25rem;
+        span:last-child{
+            float: right;
+        }
+    }
+}
+
+//选择金额和期限
+.action_loan{
+    .money_line{
+        margin-bottom: $pt38;
+    }
+    .day_line{
+        margin-bottom: $pt28;
+    }
+    
+}
+
+//费用信息
+.loan_info{
+    background: $white;
+    border-radius: 8px;
+    li{
+        padding: 0 $pt10;
+        line-height:$pt32;
+        @include font_ss_gn;
+    }
+    .loan{
+        span:first-child{
+            margin-right: $pt60;
+        }
+    }
+    .choose{
+        line-height: $pt40;
+        height: $pt40;
+        @include font_sn_gn;
+        a{
+            color: $energized;
+        }
+    }
+    .expense{
+        @include flex;
+        @include justify(space-between,justify);
+    }
+    .repayment{
+        font-size: $fontNb;
+        line-height: $pt46;
+        color: $energized;
+        span{
+            @include font_sss_gll;
+        }
+    }
+}
+
+//弹出优惠信息
+.popup_privilege{
+    position:relative;
+    background: $positiveD;
+    border-radius: 4px;
+    padding: $pt15 $pt18;
+    .close{
+        position:absolute;
+        top: -$pt40;
+        right: $pt2;
+        img{
+            width: 30px;
+        }
+    }
+    .title{
+        color: $whiteD;
+        font-size: $fontNn;
+        margin:0;
+        margin-bottom: $pt15;
+    }
+    .slogan{
+        color: $whiteD;
+        font-size: $fontBbb;
+        margin:0;
+        padding-bottom: $pt15;
+        span:last-child{
+            float:right;
+        }
+    }
+    .main{
+        padding: $pt10 $pt18 $pt15;
+        background: $energizedL;
+        .tab{
+            text-align:center;
+            margin-bottom: $pt10;
+            span{
+                @include font_nn_gl;
+                display: inline-block;
+                width: $pt70;
+                padding:$pt6 0 $pt5;
+                background: $white;
+                text-align: center;
+                &:first-child{
+                    margin-right:-2px;
+                }
+                &:last-child{
+                    margin-left:-2px;
+                }
+                &.active{
+                    background:$positive;
+                    color:$white;
+                }
+            }
+        }
+        .plist{
+            width: $pt228;
+            height: $pt160;
+            overflow: auto;
+            li{
+                position: relative;
+                img{
+                    width:100%;
+                }
+                color: $positive;
+                .limit{
+                    position: absolute;
+                    top: $pt25;
+                    left: $pt20;
+                    font-size: $fontNn;
+                    span{
+                        font-size: $fontBbb;
+                    }
+                }
+                .desc{
+                    position: absolute;
+                    top: $pt20;
+                    left: $pt100;
+                    h3{
+                        color: $positive;
+                        font-size: $fontNb;
+                        margin: 0;
+                    }
+                    p{
+                        font-size: $fontSs;
+                    }
+                }
+            }
+        }
+    }
+}

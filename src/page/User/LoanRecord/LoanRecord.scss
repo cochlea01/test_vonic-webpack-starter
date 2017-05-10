@@ -1,0 +1,208 @@
+@import '../../../asset/scss/mixin/export.scss';
+
+// 20+50+14+20+10+22*4+20+12+10
+
+.latest{
+    background: #fff;
+    padding: $pt20 0 $pt15 0;
+    .status{
+        text-align: center;
+        font-size: $fontNn;
+        line-height: $pt14;
+        margin-bottom: $pt20;
+    }
+    .main{
+        @include flex;
+        @include justify(center,center);
+        div{
+            width: 3rem;
+            padding-top: $pt10;
+        }
+        .left{
+            border-right: 1px solid #ccc;
+            img{
+                width: 90%;
+            }
+        }
+        .center{
+            text-indent:$pt12;
+            .money{
+                margin-bottom: $pt6;
+                color: $energized;
+                span{
+                    font-size: $fontBbb;
+                }
+            }
+            .text{
+                @include font_ss_gll;
+            }
+        }
+        .right{
+            width: 3.6rem;
+            p{
+                margin-bottom: $pt10;
+                @include font_ss_gn;
+                height: $pt12;
+                line-height: $pt12;
+            }
+            p.info{
+                span{
+                    padding-left: .3rem;
+                }
+                span.money{
+                    color: $energized;
+                }
+                span.date{
+                    color: $grayLl;
+                }
+            }
+            p.privilege{
+                margin-top: $pt20;
+                span{
+                    padding-left: 14px;
+                    position: relative;
+                    color: $grayLl;
+                    i{
+                        width:10px;
+                        height:10px;
+                        position: absolute;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        background-image: url('../../../asset/img/user/CIRCLE-DELETE@3x.png');
+                        left: 0;
+                        top: -1px;
+                    }
+                }
+                span:first-child{
+                    margin-right: $pt20;
+                }
+                span.active{
+                    color: $energized;
+                    i{
+                        background-image: url('../../../asset/img/user/CIRCLE-OK@3x.png');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.list{
+    position: absolute;
+    height: 300px;
+    //不设置top和bottom值，top值会自动根据上面的元素排列，通过js设置这个元素的的高度
+    left: 0;
+    right:0;
+    .bill_nums{
+        line-height: $pt50;
+        @include font_ns_gll;
+        text-align:center;
+    }
+    .scroll{
+        top: $pt50;
+    }
+    .bill{
+        background: #fff;
+        .breif{
+            height: $pt50;
+            padding: $pt8 1rem 0;
+            .num{
+                float: left;
+                span{
+                    display: block;
+                }
+                .money{
+                    padding-left: 24px;
+                    @include font_nb_gn;
+                    position: relative;
+                    margin-bottom: $pt5;
+                    i{
+                        @include icon(16px);
+                        background-image: url('../../../asset/img/user/money@3x.png');
+                        left: 2px;
+                        top: 2px;
+                    }
+                }
+                .date{
+                    @include font_ss_gl;
+                    line-height: $pt10;
+                }
+            }
+            .status{
+                float: right;
+                padding-top: $pt12;
+                padding-right: 25px;
+                @include font_ns_gn;
+                position: relative;
+                i{
+                    @include icon(20px);
+                    background-image: url('../../../asset/img/user/open@3x.png');
+                    right: 0;
+                    top: $pt10;
+                }
+            }
+        }
+        .detail{
+            transform:translate3d(0,0,0);
+            overflow: hidden;
+            background: $energized;
+            padding: 0 1rem;
+            height: 0;
+            transition: all 0.3s;
+            box-sizing: border-box;
+            p{
+                @include font_ss_gn;
+                margin: 0;
+                line-height: $fontSs;
+                @include flex;
+                @include justify(space-between,justify);
+                span{
+                    width: 1.6rem;
+                }
+                span:nth-child(2){
+                    width: 1.2rem;
+                }
+                span:nth-child(4){
+                    width: 1.8rem;
+                }
+                span:nth-child(5){
+                    text-indent: 0.4rem;
+                    color: $white;
+                    position: relative;
+                    opacity: 0.6;
+                    i{
+                        @include icon(10px);
+                        background-image: url('../../../asset/img/user/CIRCLE-DELETEgrey@3x.png');
+                        left: 0;
+                        top: -1px;
+                    }
+                }
+                span:nth-child(5).used{
+                    opacity: 1;
+                    i{
+                        background-image: url('../../../asset/img/user/CIRCLE-OKwhite@3x.png');
+                    }
+                }
+            }
+            p:first-child{
+                margin-bottom: $pt10;
+                padding-top: $pt13;
+            }
+        }
+    }
+    .bill.open{
+        .breif{
+            .status{
+                i{
+                    background-image: url('../../../asset/img/user/closed@3x.png');
+                }
+            }
+        }
+        .divide{
+            background: #fff!important;
+        }
+        .detail{
+            height: $pt60;
+        }
+    }
+}
